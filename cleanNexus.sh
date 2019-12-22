@@ -80,9 +80,9 @@ function delete_image() {
         echo "Delete $n successfully!"
         # nexus执行task,垃圾回收 
 #        echo "Clean..."
-#        curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["${test01_id}"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect 
+#        curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["'"$test01_id"'"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect 
 #        sleep 10
-#        curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["${test02_id}"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect  
+#        curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["'"$test01_id"'"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect  
       else
         echo -e "Delete $n failed!"
       fi
@@ -91,8 +91,8 @@ function delete_image() {
 
 # nexus垃圾回收 
 #  echo "Clean..."
-#  curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["${test01_id}"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect
-#  curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["${test02_id}"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect
+#  curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["'"$test01_id"'"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect
+#  curl -u ${auth_user}:${auth_passwd} -H "Content-Type: application/json" -X POST -d '{"action":"coreui_Task","method":"run","data":["'"$test01_id"'"],"type":"rpc","tid":2019}' ${nexus_url}/service/extdirect
 
 }
 
